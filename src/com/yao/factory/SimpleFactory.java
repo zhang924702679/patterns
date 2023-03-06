@@ -8,7 +8,6 @@ import com.yao.factory.pizza.simple.VeggiePizza;
 
 public class SimpleFactory {
 
-    private Pizza pizza;
     public Pizza createPizza(String pizzType) {
         if ("1".equals(pizzType)) {
             return new CheesePizza();
