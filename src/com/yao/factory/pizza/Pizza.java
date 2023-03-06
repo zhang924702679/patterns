@@ -1,6 +1,6 @@
-package com.yao.factory.pizz;
+package com.yao.factory.pizza;
 
-public interface Pizz {
+public interface Pizza {
 
     void prepare();
     void bake();
