@@ -12,7 +12,8 @@ public class BaseUtils {
         Method[] methods = aClass.getMethods();
         for (Method method : methods) {
             String name = method.getName();
-            if (name.startsWith("get") && !name.equals("getClass")) {
+            //需要外判断是否是桥接方法 桥接方法是编译器自动生成
+            if (name.startsWith("get") && !name.equals("getClass") && !method.isBridge()) {
                 String methodName = "set" + name.substring(3);
                 try {
                     Method methodA = aClass.getMethod(name);
